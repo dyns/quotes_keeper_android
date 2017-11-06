@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cfff"
+    tools:context=".NavigationDrawerFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center"
+        android:text="Source Selection:"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"/>
+
+    <ListView
+        android:id="@+id/drawerListView"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="1dp"
+        android:divider="@color/shadow_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#F2F1EF</color>
+    <color name="shadow">#BDC3C7</color>
+
+    <color name="shadow_transparent">#CCBDC3C7</color>
+    <color name="primary_transparent">#bb6C7A89</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="semiTransparentBackground">#88ECF0F1</color>
+
+    <color name="selected_category_highlight_color">#7f8c8d</color>
+    <color name="select_categories_text_color">#2c3e50</color>
+
+    <color name="black_semi_transparent">#B2000000</color>
+
+    <color name="primary">#6C7A89</color>
+    <color name="primary_dark">#34495E</color>
+    <color name="accent">#6C7A89</color>
+
+
+    <color name="red">#ff0000</color>
+
+</resources>

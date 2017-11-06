@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:clickable="true"
+            android:background="@drawable/selector_transparent_shadow_pressed"
+            android:id="@+id/selectCategoriesView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:padding="@dimen/padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="@string/visible_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/categoriesTextView"
+                    android:text="Single-line text view that scrolls automatically if the text is too long to fit in the widget, sdaljk , asdfl;k, fadsl;k,  asdfkjjklfsdlkj;fsd;kljsdf sdaoifaewj fadskjfasjfo w"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollHorizontally="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="@dimen/padding"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/shadow"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:divider="@color/background"
+                android:dividerHeight="8dp"
+                android:background="@color/background"
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_results"
+                android:gravity="center" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:visibility="gone"
+        android:background="@color/semiTransparentBackground"
+        android:id="@+id/overlayView"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="@dimen/half_padding"
+        android:id="@+id/floatingMenu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_addButtonColorNormal="@color/primary"
+        fab:fab_addButtonColorPressed="@color/primary_dark"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newCategoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_title="CATEGORY"
+            fab:fab_colorNormal="@color/primary"
+            fab:fab_colorPressed="@color/primary_dark"
+            fab:fab_icon="@drawable/ic_subject_white"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newSourceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_title="SOURCE"
+            fab:fab_colorNormal="@color/primary"
+            fab:fab_colorPressed="@color/primary_dark"
+            fab:fab_icon="@drawable/ic_book_white"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newQuoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_title="QUOTE"
+            fab:fab_size="mini"
+            fab:fab_colorNormal="@color/primary"
+            fab:fab_colorPressed="@color/primary_dark"
+            fab:fab_icon="@drawable/ic_format_quote_white"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>
